@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <style type="text/css">
+      .tabel {
+        margin: 10px;
+        padding: 15px;
+        border-radius: 7px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form name="calculator">
+      <table style="background-color: #666; color: white" class="tabel">
+        <p style="color: black"><b>Calculator</b></p>
+        <tr>
+          <td>Angka 1</td>
+          <td>:</td>
+          <td><input type="number" name="angka1" /></td>
+        </tr>
+        <tr>
+          <td>Angka 2</td>
+          <td>:</td>
+          <td><input type="number" name="angka2" /></td>
+        </tr>
+        <tr>
+          <td>Angka 3</td>
+          <td>:</td>
+          <td><input type="number" name="angka3" /></td>
+        </tr>
+        <tr>
+          <td>Hasil</td>
+          <td>:</td>
+          <td><input type="number" name="hasil" /></td>
+        </tr>
+        <tr style="text-align: right">
+          <td colspan="3" text-align="center">
+            <input
+              class="tombol"
+              type="button"
+              onclick="tambah()"
+              value="   +   "
+            />
+
+            <input
+              class="tombol"
+              type="button"
+              onclick="kurang()"
+              value="   -   "
+            />
+
+            <input
+              class="tombol"
+              type="button"
+              onclick="kali()"
+              value="   *   "
+            />
+
+            <input
+              class="tombol"
+              type="button"
+              onclick="bagi()"
+              value="   /   "
+            />
+          </td>
+        </tr>
+      </table>
+    </form>
+
+    <script type="text/javascript">
+      function tambah() {
+        var angka1 = parseFloat(document.calculator.angka1.value);
+        var angka2 = parseFloat(document.calculator.angka2.value);
+        var angka3 = parseFloat(document.calculator.angka3.value);
+        var hasil = angka1 + angka2 + angka3;
+        document.calculator.hasil.value = hasil;
+      }
+      function kurang() {
+        var angka1 = parseFloat(document.calculator.angka1.value);
+        var angka2 = parseFloat(document.calculator.angka2.value);
+        var angka3 = parseFloat(document.calculator.angka3.value);
+        var hasil = angka1 - angka2 - angka3;
+        document.calculator.hasil.value = hasil;
+      }
+      function kali() {
+        var angka1 = parseFloat(document.calculator.angka1.value);
+        var angka2 = parseFloat(document.calculator.angka2.value);
+        var angka3 = parseFloat(document.calculator.angka3.value);
+        var hasil = angka1 * angka2 * angka3;
+        document.calculator.hasil.value = hasil;
+      }
+      function bagi() {
+        var angka1 = parseFloat(document.calculator.angka1.value);
+        var angka2 = parseFloat(document.calculator.angka2.value);
+        var angka3 = parseFloat(document.calculator.angka3.value);
+        var hasil = angka1 / angka2 / angka3;
+        document.calculator.hasil.value = hasil;
+      }
+    </script>
+  </body>
+</html>
